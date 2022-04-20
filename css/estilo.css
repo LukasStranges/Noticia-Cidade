@@ -1,0 +1,232 @@
+1/*ESTRUTURA DO SITE*/
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #fff url(../imagem/fundo.png) repeat-x;
+	font-family: "Trebuchet Ms", Helvetica, sans-serif;
+}
+#conteiner{
+	/*definir uma largura fixa, pois nao e um layout fixo**/
+	width: 750px;
+	margin: 0 auto;
+}
+	
+	
+#topo{
+	height: 150px;
+	background: url(../imagem/detalhe-topo.png) no-repeat right;
+	padding-top: 25px;/*espaçamento para a logo**/
+}
+.logo{
+	width: 152px;
+	height: 66px;
+	background: url(../imagem/logo.png) no-repeat center;
+	text-indent: 2000px;/*indentar ou esconder um texto**esconde o h1 da pagina*/
+}
+/*******BARRA DE NAVEGAÇÃO******/
+/*pra criar links, utilizar a tag de lista, e remove todas as formatações dela*/
+a:link, a:visited{
+    color: #b10333;
+    padding: 2px;
+}
+a:hover{
+	color: #b10333;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;/*remover os pontinhos da lista*/
+}
+#topo ul{/*para formata uma ul especifica*/
+	background: #b10333;
+	margin-top: 30px;
+	float: left;
+}
+#topo ul li{/*fazer os links flutuarem*/
+	float: left;
+}
+#topo ul a{/*formata os links*/
+	font-size: 0.9em;
+	display: block;
+	padding: 0.5em 1.5em;
+	line-height: 2.5em;
+	text-decoration: none;/*remover efeitos do link*/
+	color: #fff;
+	background: url(../imagem/divisor.png) no-repeat left center;/*tilizado para por uma imagem dividindo os links*/
+}
+#topo ul .primeiro a{/*remover o divisor do lado esquerdo*/
+	background: none;
+}
+#topo ul a:hover{/*quando passar o mouse em cima muda a cor do nome*/
+	background: ;
+}
+/*para deixar o link marcado quando estiver na pagina- obs: tem que definir um id pro body*/
+/*cada class vai de acordo com a pagina do body, os ID são fixos*/
+body.home #navegacao a#home,
+body.brasil #navegacao a#brasil,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.fotos #navegacao a#fotos{
+	color: #fff;
+	background: #de003e;
+	cursor: text;
+}
+/*Layout em 3 colunas */
+#conteudo{
+	margin-top: 60px;
+	background: #f5f5f5;
+}
+/*Tem que calcular o tamanho para cada coluna junto com a 
+margem de acordo com o whidth ou largura fixa definida*/
+/*OBS; UTILIZAR MARGEM PARA ORGANIZAR AS COLUNAS*/
+#lateral{
+	width: 180px;
+	float: left;
+	margin: 0 0 20px -750px;/*lateral esquerda*/
+}
+
+#tres-colunas #primario{
+  width: 270px;
+  float: left;
+  margin: 0 0 20px 195px;/*meio*/
+}
+#uma-colunas #primario{/*para uma pagina de duas*/
+  width: 750px;
+  float: left;
+  margin: 0 0 20px 0;/*sem magem de afastamento*/  
+  
+}
+#duas-colunas #primario{/*para uma pagina de duas*/
+  width: 555px;
+  float: left;
+  margin: 0 0 20px 195px;/*meio*/
+  
+}
+#tres-colunas #secundario{
+	width: 270px;
+	float: left;
+	margin: 0 0 20px 15px;/*lateral direita*/
+	
+}
+.caixa{
+	margin: 10px 0;
+	padding: 10px;
+	background: #f3f3f3 url(../imagem/fundo-caixa.png);
+}
+h2{
+	font-size: 1em;
+	background: #294c71;
+	color: #fff;
+	padding: 5px;
+}
+.caixa-conteudo{
+	background: #fff;
+	padding: 5px;
+	margin-top: 5px;
+}
+/**Formata menus laterais**/
+#lateral ul a{
+	font-size: 0.9em;
+	padding: 3px;
+	display: block;
+	line-height: 30px;
+	color: #000;
+	text-decoration: none;
+	border-bottom: 1px solid #f3f3f3;
+}
+#lateral ul a:hover{/*links da entrevista*/
+	background: #f9f9f9 url(../imagem/marcador.png) no-repeat left center;
+	padding-left: 20px;
+	color: #a1a1a1;
+}
+/***Formatando forúlarios***//*dentro da lateral*/
+label{
+	display: block;
+	cursor: pointer;
+}
+input{
+	padding: 5px;
+	width: 125px;
+	font-size: 0.9em;
+	background: #fff;
+}
+input.submit{
+	width: 80px;
+	color: #fff;
+	background-color: #b10333;
+	border: 2px solid #870529;
+}
+/*****Formatando imagem****/
+img.imagem-principal{
+	width: 98%;
+	border: 3px solid #dfdfdf;
+}
+h3{
+	text-transform: uppercase;/*deixa maiusculo*/
+	display: inline;
+	font-size: 0.8em;
+	padding: 3px;
+}
+.destaque h3{/*fica mais facil de formata os h3 que tiver na msm div*/
+	background: #b10333;
+	color: #fff;
+}
+.entrevista h3{/*fica mais facil de formata os h3 que tiver na msm div*/
+	background: #b10333;
+	color: black;
+}
+/*Formata lista de noticias*/
+#lista-noticias li{
+	padding: 2px;
+	border-bottom: 1px solid #ccc;
+	height: 62px;
+}
+#lista-noticias li a img{
+	float: left;
+	margin: 5px;
+}
+#lista-noticias li a{
+	text-decoration: none;
+}
+#lista-noticias li a h3{
+	font-size: 0.8em;
+	padding: 0;
+	color: #3e7ab9;
+}
+#lista-noticias li a p{
+	font-size: 0.7em;
+	padding: 0;
+	color: black;
+}
+#lista-noticias li:hover{
+	background: #eee;
+	cursor: pointer;
+}
+
+
+
+/*****RODAPE*****/
+#conteiner-rodape{
+	background: #294c71;
+	padding: 20px;
+}
+#tres-colunas #rodape{
+	width: 750px;
+	margin: 0 auto;
+	color: #fff;
+}
+#duas-colunas #rodape{
+	width: 750px;
+	margin: 0 auto;
+	color: #fff;
+}
+#uma-colunas #rodape{
+	width: 750px;
+	margin: 0 auto;
+	color: #fff;
+}
